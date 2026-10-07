@@ -1,0 +1,48 @@
+[project]
+name = "pev"
+version = "0.1.0"
+description = "A System One model for general protein evolution"
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+license = { text = "MIT" }
+license-files = ["LICENSE"]
+authors = [{ name = "Pev Team" }]
+
+# Scoring the released model on a parquet of measurements, and nothing else: the
+# corpus builders and their fetch-and-parse dependencies are not part of this
+# distribution.
+dependencies = [
+    "torch>=2.14.0",
+    "transformers>=5.17.0",
+    "peft>=0.21.0",
+    "accelerate>=1.15.0",
+    "numpy>=2.0",
+    "pandas>=2.2",
+    "pyarrow>=17.0",
+]
+
+[project.urls]
+Homepage = "https://yibow.me/pev"
+Repository = "https://github.com/Yibo-Wen/Pev"
+Model = "https://huggingface.co/Yibooooo/Pev"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/pev"]
+
+# The wheels the released numbers were produced against: CUDA 12.6, which needs
+# only a 525-series driver, and which also runs on CPU. The marker keeps macOS on
+# PyPI's torch, since this index publishes no macOS wheel. Point it at another
+# CUDA build if your driver differs.
+[[tool.uv.index]]
+name = "pytorch-cu126"
+url = "https://download.pytorch.org/whl/cu126"
+explicit = true
+
+[tool.uv.sources]
+torch = [
+    { index = "pytorch-cu126", marker = "sys_platform == 'linux' or sys_platform == 'win32'" },
+]

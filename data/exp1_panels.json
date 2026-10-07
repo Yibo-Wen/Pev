@@ -1,0 +1,494 @@
+{
+  "_": "What the Experiment 1 test data must contain. Pinned; see the README.",
+  "archive": "pev-exp1-test.zip",
+  "files": {
+    "data/processed/variants.parquet": {
+      "sha256": "6b30c803ffd3cf0aa6c2cfe8536c748bb60ed995c65995067f1da2a8f5caab4d",
+      "bytes": 16116671,
+      "rows": 214378
+    }
+  },
+  "evaluation_split": {
+    "rows": 214378,
+    "families": 165,
+    "assay_contexts": 157
+  },
+  "benchmark": {
+    "panels": 45,
+    "families": 39,
+    "candidates": 33463,
+    "by_class": {
+      "antibody": {
+        "panels": 5,
+        "families": 5,
+        "candidates": 1602
+      },
+      "domain": {
+        "panels": 27,
+        "families": 27,
+        "candidates": 28941
+      },
+      "peptide": {
+        "panels": 13,
+        "families": 7,
+        "candidates": 2920
+      }
+    },
+    "ranking_heads": {
+      "binding": "choice",
+      "stability": "choice"
+    },
+    "contexts": [
+      {
+        "context_id": "abagym:HER2_2021_trastuzumab",
+        "family_id": "abagym:ab:trastuzumab",
+        "sequence_class": "antibody",
+        "assay_type": "binding",
+        "readout_type": "binding_signal",
+        "candidates": 184,
+        "hits": 102,
+        "prevalence": 0.554348
+      },
+      {
+        "context_id": "abagym:LAMP-1_2023_FAB-B",
+        "family_id": "abagym:ag:LAMP-1",
+        "sequence_class": "domain",
+        "assay_type": "binding",
+        "readout_type": "binding_signal",
+        "candidates": 1366,
+        "hits": 447,
+        "prevalence": 0.327233
+      },
+      {
+        "context_id": "alphaseq:Ab-14-VH-ml:li:assayB",
+        "family_id": "alphaseq:Ab-14-VH-ml",
+        "sequence_class": "antibody",
+        "assay_type": "binding",
+        "readout_type": "affinity",
+        "candidates": 163,
+        "hits": 48,
+        "prevalence": 0.294479
+      },
+      {
+        "context_id": "alphaseq:Ab-14-VH:engelhart:assay1",
+        "family_id": "alphaseq:Ab-14-VH",
+        "sequence_class": "antibody",
+        "assay_type": "binding",
+        "readout_type": "affinity",
+        "candidates": 448,
+        "hits": 25,
+        "prevalence": 0.055804
+      },
+      {
+        "context_id": "alphaseq:Ab-14-VL-ml:li:assayB",
+        "family_id": "alphaseq:Ab-14-VL-ml",
+        "sequence_class": "antibody",
+        "assay_type": "binding",
+        "readout_type": "affinity",
+        "candidates": 337,
+        "hits": 36,
+        "prevalence": 0.106825
+      },
+      {
+        "context_id": "alphaseq:Ab-14-VL:engelhart:assay1",
+        "family_id": "alphaseq:Ab-14-VL",
+        "sequence_class": "antibody",
+        "assay_type": "binding",
+        "readout_type": "affinity",
+        "candidates": 470,
+        "hits": 41,
+        "prevalence": 0.087234
+      },
+      {
+        "context_id": "fireprotdb:Domainome_DDG:O60884:DOMAINOME_DDG:nan-nan-nan",
+        "family_id": "fireprotdb:O60884",
+        "sequence_class": "domain",
+        "assay_type": "stability",
+        "readout_type": "folding_free_energy",
+        "candidates": 1117,
+        "hits": 147,
+        "prevalence": 0.131603
+      },
+      {
+        "context_id": "fireprotdb:Domainome_DDG:Q9H4Q4:DOMAINOME_DDG:nan-nan-nan",
+        "family_id": "fireprotdb:Q9H4Q4",
+        "sequence_class": "domain",
+        "assay_type": "stability",
+        "readout_type": "folding_free_energy",
+        "candidates": 836,
+        "hits": 114,
+        "prevalence": 0.136364
+      },
+      {
+        "context_id": "fireprotdb:Domainome_DDG:Q9H963:DOMAINOME_DDG:nan-nan-nan",
+        "family_id": "fireprotdb:Q9H963",
+        "sequence_class": "domain",
+        "assay_type": "stability",
+        "readout_type": "folding_free_energy",
+        "candidates": 1216,
+        "hits": 167,
+        "prevalence": 0.137336
+      },
+      {
+        "context_id": "fireprotdb:Domainome_DDG:Q9Y2H8:DOMAINOME_DDG:nan-nan-nan",
+        "family_id": "fireprotdb:Q9Y2H8",
+        "sequence_class": "domain",
+        "assay_type": "stability",
+        "readout_type": "folding_free_energy",
+        "candidates": 3762,
+        "hits": 513,
+        "prevalence": 0.136364
+      },
+      {
+        "context_id": "megascale:1QP2.pdb",
+        "family_id": "megascale:1QP2.pdb",
+        "sequence_class": "domain",
+        "assay_type": "stability",
+        "readout_type": "folding_free_energy",
+        "candidates": 1101,
+        "hits": 80,
+        "prevalence": 0.072661
+      },
+      {
+        "context_id": "megascale:2BTT.pdb",
+        "family_id": "megascale:2BTT.pdb",
+        "sequence_class": "domain",
+        "assay_type": "stability",
+        "readout_type": "folding_free_energy",
+        "candidates": 947,
+        "hits": 38,
+        "prevalence": 0.040127
+      },
+      {
+        "context_id": "megascale:2HBB.pdb_pross9",
+        "family_id": "megascale:2HBB.pdb_pross9",
+        "sequence_class": "domain",
+        "assay_type": "stability",
+        "readout_type": "folding_free_energy",
+        "candidates": 773,
+        "hits": 26,
+        "prevalence": 0.033635
+      },
+      {
+        "context_id": "megascale:2K52.pdb_L42A",
+        "family_id": "megascale:2K52.pdb_L42A",
+        "sequence_class": "domain",
+        "assay_type": "stability",
+        "readout_type": "folding_free_energy",
+        "candidates": 1348,
+        "hits": 56,
+        "prevalence": 0.041543
+      },
+      {
+        "context_id": "megascale:2KCM.pdb",
+        "family_id": "megascale:2KCM.pdb",
+        "sequence_class": "domain",
+        "assay_type": "stability",
+        "readout_type": "folding_free_energy",
+        "candidates": 1198,
+        "hits": 49,
+        "prevalence": 0.040902
+      },
+      {
+        "context_id": "megascale:2KRU.pdb",
+        "family_id": "megascale:2KRU.pdb",
+        "sequence_class": "domain",
+        "assay_type": "stability",
+        "readout_type": "folding_free_energy",
+        "candidates": 890,
+        "hits": 41,
+        "prevalence": 0.046067
+      },
+      {
+        "context_id": "megascale:2KVT.pdb",
+        "family_id": "megascale:2KVT.pdb",
+        "sequence_class": "domain",
+        "assay_type": "stability",
+        "readout_type": "folding_free_energy",
+        "candidates": 928,
+        "hits": 36,
+        "prevalence": 0.038793
+      },
+      {
+        "context_id": "megascale:2M2J.pdb",
+        "family_id": "megascale:2M2J.pdb",
+        "sequence_class": "domain",
+        "assay_type": "stability",
+        "readout_type": "folding_free_energy",
+        "candidates": 1346,
+        "hits": 85,
+        "prevalence": 0.06315
+      },
+      {
+        "context_id": "megascale:2MKY.pdb",
+        "family_id": "megascale:2MKY.pdb",
+        "sequence_class": "domain",
+        "assay_type": "stability",
+        "readout_type": "folding_free_energy",
+        "candidates": 1011,
+        "hits": 75,
+        "prevalence": 0.074184
+      },
+      {
+        "context_id": "megascale:2WQG.pdb",
+        "family_id": "megascale:2WQG.pdb",
+        "sequence_class": "domain",
+        "assay_type": "stability",
+        "readout_type": "folding_free_energy",
+        "candidates": 656,
+        "hits": 28,
+        "prevalence": 0.042683
+      },
+      {
+        "context_id": "megascale:5FWB.pdb_M24A",
+        "family_id": "megascale:5FWB.pdb_M24A",
+        "sequence_class": "domain",
+        "assay_type": "stability",
+        "readout_type": "folding_free_energy",
+        "candidates": 1127,
+        "hits": 49,
+        "prevalence": 0.043478
+      },
+      {
+        "context_id": "megascale:6ACV.pdb",
+        "family_id": "megascale:6ACV.pdb",
+        "sequence_class": "domain",
+        "assay_type": "stability",
+        "readout_type": "folding_free_energy",
+        "candidates": 1155,
+        "hits": 80,
+        "prevalence": 0.069264
+      },
+      {
+        "context_id": "megascale:EA|run2_0325_0005.pdb",
+        "family_id": "megascale:EA|run2_0325_0005.pdb",
+        "sequence_class": "domain",
+        "assay_type": "stability",
+        "readout_type": "folding_free_energy",
+        "candidates": 888,
+        "hits": 2,
+        "prevalence": 0.002252
+      },
+      {
+        "context_id": "megascale:EA|run5_0050_0004.pdb",
+        "family_id": "megascale:EA|run5_0050_0004.pdb",
+        "sequence_class": "domain",
+        "assay_type": "stability",
+        "readout_type": "folding_free_energy",
+        "candidates": 889,
+        "hits": 2,
+        "prevalence": 0.00225
+      },
+      {
+        "context_id": "megascale:EHEE_rd2_0152.pdb",
+        "family_id": "megascale:EHEE_rd2_0152.pdb",
+        "sequence_class": "domain",
+        "assay_type": "stability",
+        "readout_type": "folding_free_energy",
+        "candidates": 697,
+        "hits": 28,
+        "prevalence": 0.040172
+      },
+      {
+        "context_id": "megascale:EHEE_rd4_0394.pdb",
+        "family_id": "megascale:EHEE_rd4_0394.pdb",
+        "sequence_class": "domain",
+        "assay_type": "stability",
+        "readout_type": "folding_free_energy",
+        "candidates": 661,
+        "hits": 62,
+        "prevalence": 0.093797
+      },
+      {
+        "context_id": "megascale:EHEE_rd4_0877.pdb",
+        "family_id": "megascale:EHEE_rd4_0877.pdb",
+        "sequence_class": "domain",
+        "assay_type": "stability",
+        "readout_type": "folding_free_energy",
+        "candidates": 689,
+        "hits": 20,
+        "prevalence": 0.029028
+      },
+      {
+        "context_id": "megascale:HHH_rd4_0124.pdb",
+        "family_id": "megascale:HHH_rd4_0124.pdb",
+        "sequence_class": "domain",
+        "assay_type": "stability",
+        "readout_type": "folding_free_energy",
+        "candidates": 803,
+        "hits": 20,
+        "prevalence": 0.024907
+      },
+      {
+        "context_id": "megascale:XX|run8_1098_0003.pdb",
+        "family_id": "megascale:XX|run8_1098_0003.pdb",
+        "sequence_class": "domain",
+        "assay_type": "stability",
+        "readout_type": "folding_free_energy",
+        "candidates": 885,
+        "hits": 14,
+        "prevalence": 0.015819
+      },
+      {
+        "context_id": "megascale:v2_2HDZ.pdb",
+        "family_id": "megascale:v2_2HDZ.pdb",
+        "sequence_class": "domain",
+        "assay_type": "stability",
+        "readout_type": "folding_free_energy",
+        "candidates": 886,
+        "hits": 23,
+        "prevalence": 0.025959
+      },
+      {
+        "context_id": "proteingym:B2L11_HUMAN_Dutta_2010_binding-Mcl-1",
+        "family_id": "proteingym:B2L11_HUMAN_Dutta_2010_binding-Mcl-1",
+        "sequence_class": "peptide",
+        "assay_type": "binding",
+        "readout_type": "binding_signal",
+        "candidates": 170,
+        "hits": 3,
+        "prevalence": 0.017647
+      },
+      {
+        "context_id": "proteingym:DLG4_RAT_McLaughlin_2012",
+        "family_id": "proteingym:DLG4_RAT_McLaughlin_2012",
+        "sequence_class": "domain",
+        "assay_type": "binding",
+        "readout_type": "binding_signal",
+        "candidates": 1576,
+        "hits": 303,
+        "prevalence": 0.192259
+      },
+      {
+        "context_id": "skempi:1PPF_E_I:FL:294",
+        "family_id": "skempi:1PPF_E_I|Pr/PI",
+        "sequence_class": "domain",
+        "assay_type": "binding",
+        "readout_type": "affinity",
+        "candidates": 190,
+        "hits": 33,
+        "prevalence": 0.173684
+      },
+      {
+        "context_id": "slimdms:EIF4E_eIF4E__P06730_1_217:wt_00001",
+        "family_id": "slimdms:Q13541",
+        "sequence_class": "peptide",
+        "assay_type": "binding",
+        "readout_type": "binding_signal",
+        "candidates": 155,
+        "hits": 21,
+        "prevalence": 0.135484
+      },
+      {
+        "context_id": "slimdms:EIF4E_eIF4E__P06730_1_217:wt_00002",
+        "family_id": "slimdms:Q13541",
+        "sequence_class": "peptide",
+        "assay_type": "binding",
+        "readout_type": "binding_signal",
+        "candidates": 148,
+        "hits": 51,
+        "prevalence": 0.344595
+      },
+      {
+        "context_id": "slimdms:G3BP1_NTF2_1_Q13283_1_139:wt_00005",
+        "family_id": "slimdms:Q14694",
+        "sequence_class": "peptide",
+        "assay_type": "binding",
+        "readout_type": "binding_signal",
+        "candidates": 242,
+        "hits": 52,
+        "prevalence": 0.214876
+      },
+      {
+        "context_id": "slimdms:G3BP1_NTF2_1_Q13283_1_139:wt_00006",
+        "family_id": "slimdms:Q14694",
+        "sequence_class": "peptide",
+        "assay_type": "binding",
+        "readout_type": "binding_signal",
+        "candidates": 243,
+        "hits": 47,
+        "prevalence": 0.193416
+      },
+      {
+        "context_id": "slimdms:Keap1_KELCH__Q14145_321_609:wt_00009",
+        "family_id": "slimdms:Q14494",
+        "sequence_class": "peptide",
+        "assay_type": "binding",
+        "readout_type": "binding_signal",
+        "candidates": 246,
+        "hits": 39,
+        "prevalence": 0.158537
+      },
+      {
+        "context_id": "slimdms:Keap1_KELCH__Q14145_321_609:wt_00010",
+        "family_id": "slimdms:Q14494",
+        "sequence_class": "peptide",
+        "assay_type": "binding",
+        "readout_type": "binding_signal",
+        "candidates": 250,
+        "hits": 38,
+        "prevalence": 0.152
+      },
+      {
+        "context_id": "slimdms:PABP-B_PABP__P11940_544_623:wt_00019",
+        "family_id": "slimdms:Q9H074",
+        "sequence_class": "peptide",
+        "assay_type": "binding",
+        "readout_type": "binding_signal",
+        "candidates": 223,
+        "hits": 11,
+        "prevalence": 0.049327
+      },
+      {
+        "context_id": "slimdms:PABP-B_PABP__P11940_544_623:wt_00020",
+        "family_id": "slimdms:Q9H074",
+        "sequence_class": "peptide",
+        "assay_type": "binding",
+        "readout_type": "binding_signal",
+        "candidates": 239,
+        "hits": 206,
+        "prevalence": 0.861925
+      },
+      {
+        "context_id": "slimdms:TNKS_TANK-peptide-bind__O95271_174_649:wt_00041",
+        "family_id": "slimdms:P78314",
+        "sequence_class": "peptide",
+        "assay_type": "binding",
+        "readout_type": "binding_signal",
+        "candidates": 245,
+        "hits": 35,
+        "prevalence": 0.142857
+      },
+      {
+        "context_id": "slimdms:TNKS_TANK-peptide-bind__O95271_174_649:wt_00042",
+        "family_id": "slimdms:P78314",
+        "sequence_class": "peptide",
+        "assay_type": "binding",
+        "readout_type": "binding_signal",
+        "candidates": 252,
+        "hits": 15,
+        "prevalence": 0.059524
+      },
+      {
+        "context_id": "slimdms:YES1_SH3__P07947_90_152:wt_00045",
+        "family_id": "slimdms:P56945",
+        "sequence_class": "peptide",
+        "assay_type": "binding",
+        "readout_type": "binding_signal",
+        "candidates": 253,
+        "hits": 12,
+        "prevalence": 0.047431
+      },
+      {
+        "context_id": "slimdms:YES1_SH3__P07947_90_152:wt_00046",
+        "family_id": "slimdms:P56945",
+        "sequence_class": "peptide",
+        "assay_type": "binding",
+        "readout_type": "binding_signal",
+        "candidates": 254,
+        "hits": 61,
+        "prevalence": 0.240157
+      }
+    ]
+  }
+}
