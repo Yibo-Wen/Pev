@@ -73,10 +73,6 @@ Every number lands in `results/discovery/` as a table. `make all` chains the che
 and reproduces the discovery-screen tables below; the closed-loop campaign and the throughput
 frontier are described here but their code is not part of this release.
 
-The checkpoint also carries `calibration.json`, the post-hoc calibrator fitted on held-out families;
-`pev.calibration.load()` applies it. The screen does not, because every metric it reports is
-rank-based and the calibration is rank-preserving -- so the tables hold with it and without it.
-
 ## Results
 
 Three experiments: a **discovery screen** on held-out families, a **closed-loop campaign** on the
@@ -94,14 +90,22 @@ unmeasured mutations are absent from the panel rather than scored as misses.
 | *Perfect ranking* | *0.949* | *18.94×* | *1.000* | *1.0* |
 | **Pev** | **0.424** | **7.19×** | **0.729** | **6.1** |
 | ESM-2 zero-shot | 0.231 | 2.80× | 0.545 | 48.3 |
+| ESM-1v zero-shot | 0.167 | 2.16× | 0.540 | 53.9 |
 | Random | 0.128 | 1.02× | 0.497 | 27.8 |
 
 **Pev returns a beneficial mutation in 2 of every 5 wells where random screening returns 1 in 8.**
 
-Wells-to-first-hit is the one column where the untrained backbone does worse than random (48.3
-against 27.8), and it is not a glitch: a confidently wrong ranking is worse than no ranking at all
-for *time to first hit*, and ESM-2's stability ordering is confidently wrong -- 80.6 wells on the 24
-stability panels, against 11.4 on the 21 binding ones.
+ESM-1v, scored by masked marginals as Meier et al. publish it and ensembled over its five
+checkpoints, does not close the gap: it sits below the ESM-2 arm, so the comparison reported here
+was already the harder one. Paired, family clustered and bootstrapped, Pev's hit-rate margin is
++0.218 [+0.099, +0.342] over ESM-2 and +0.285 [+0.162, +0.408] over ESM-1v, and neither interval
+reaches zero.
+
+Wells-to-first-hit is the one column where an untrained backbone does worse than random (48.3 and
+53.9 against 27.8), and it is not a glitch: a confidently wrong ranking is worse than no ranking at
+all for *time to first hit*, and the masked-LM conservation signal is confidently wrong on
+stability -- 80.6 wells for ESM-2 and 95.5 for ESM-1v on the 24 stability panels, against 11.4 and
+6.2 on the 21 binding ones.
 
 By sequence class, best in each row in bold:
 
@@ -109,17 +113,20 @@ By sequence class, best in each row in bold:
 | --- | --- | --- | --- | --- |
 | **Domain**<br><sub>27 fam · 27 panels</sub> | **Pev** | **0.522** | **10.96×** | **0.828** |
 | | ESM-2 zero-shot | 0.219 | 3.73× | 0.549 |
+| | ESM-1v zero-shot | 0.141 | 2.65× | 0.531 |
 | | Random | 0.080 | 1.05× | 0.498 |
 | **Peptide**<br><sub>7 fam · 13 panels</sub> | **Pev** | **0.246** | **1.32×** | **0.572** |
 | | ESM-2 zero-shot | 0.215 | 0.87× | 0.506 |
+| | ESM-1v zero-shot | 0.177 | 1.24× | 0.535 |
 | | Random | 0.199 | 1.00× | 0.495 |
 | **Antibody**<br><sub>5 fam · 5 panels</sub> | Pev | **0.360** | 2.16× | 0.604 |
 | | **ESM-2 zero-shot** | 0.340 | **2.81×** | **0.623** |
+| | ESM-1v zero-shot | 0.280 | 1.90× | 0.604 |
 | | Random | 0.202 | 0.93× | 0.495 |
 
-Domain carries the result. Peptide clears the untrained backbone on both yield and ranking.
-Antibody is unresolved on five families: Pev returns more hits per ten wells than the backbone,
-but still trails it on enrichment.
+Domain carries the result. Peptide clears both untrained backbones on both yield and ranking.
+Antibody is unresolved on five families: Pev returns more hits per ten wells than either backbone,
+but still trails ESM-2 on enrichment.
 
 ### Better sequences per assay in a closed loop
 
