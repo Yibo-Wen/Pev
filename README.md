@@ -11,7 +11,7 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/📄_Paper-coming_soon-9E9E9E?style=for-the-badge&logoColor=white" alt="Paper — coming soon">
+  <a href="https://yibow.me/pev/paper.pdf"><img src="https://img.shields.io/badge/📄_Paper-PDF-6B67EE?style=for-the-badge&logoColor=white" alt="Paper (PDF)"></a>
   <a href="https://yibow.me/pev"><img src="https://img.shields.io/badge/📝_Project_Page-FF5722?style=for-the-badge&logoColor=white" alt="Project Page"></a>
   <a href="https://huggingface.co/Yibooooo/Pev"><img src="https://img.shields.io/badge/🤗_Model-Hugging_Face-FFD21E?style=for-the-badge&logoColor=white" alt="Model on Hugging Face"></a>
 </p>
@@ -197,18 +197,20 @@ numbers here.
 
 ## Contributors
 
-Pev Team
+[**Yibo Wen**](https://yibow.me)<sup>1</sup>, **Han Liu**<sup>1</sup>
+
+<sup>1</sup>Northwestern University
 
 ## Citation
 
-A preprint is forthcoming. In the meantime:
+The paper is at [yibow.me/pev/paper.pdf](https://yibow.me/pev/paper.pdf).
 
 ```bibtex
 @misc{wen2026pev,
   title={A System One Approach to General Protein Evolution},
-  author={Pev Team},
+  author={Yibo Wen and Han Liu},
   year={2026},
-  howpublished={\url{https://yibow.me/pev}},
-  url={https://yibow.me/pev},
+  howpublished={\url{https://yibow.me/pev/paper.pdf}},
+  url={https://yibow.me/pev/paper.pdf},
 }
 ```
